@@ -1,0 +1,36 @@
+.score {
+	font-size: 100px;
+	display: inline;
+	margin-bottom: 50px;
+}
+
+.won {
+	color: green;
+}
+
+h1 {
+	text-align: center;
+	margin: 30px auto 0 auto;
+	color: #BBBBBB;
+}
+
+h2 {
+	color: grey;
+}
+
+div {
+	text-align: center;
+	padding: 20px;
+}
+
+button {
+	padding: 10px;
+}
+
+input, hr {
+	margin-bottom: 30px;
+}
+
+hr {
+	width: 50%;
+}

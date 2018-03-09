@@ -1,0 +1,81 @@
+body {
+	color: white;
+	background-color: #232323;
+	text-align: center;
+	margin: 0 auto;
+	font-family: "Montserrat", "Avenir", sans-serif;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 100;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.1;
+	background-color: #2A8ACB;
+	margin: 0;
+	padding: 35px;
+}
+
+h1 span {
+	display: block;
+	font-size: 2em;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	font-size: inherit;
+	letter-spacing: 1px;
+	color: #2A8ACB;
+	transition: all 0.25s;
+	--webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+}
+
+button:hover {
+	color: white;
+	background-color: #2A8ACB;
+}
+
+.square {
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+	transition: background-color 0.5s;
+	--webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+}
+
+.selected {
+	color: white;
+	background-color: #2A8ACB;
+}
+
+.hidden {
+	display: none;
+}
+
+#container {
+	width: 65%;
+	margin: 25px auto 0 auto;
+}
+
+#navBar {
+	background-color: white;
+	color: black;
+	height: 40px;
+}
+
+#message {
+	display: inline-block;
+	width: 20%;
+	text-transform: uppercase;
+}
