@@ -1,3 +1,4 @@
+var difficulty = "hard";
 var squares = document.querySelectorAll(".square");
 var numSquares = 6;
 var colors = generateColorArray(numSquares);
@@ -26,8 +27,14 @@ hardBtn.addEventListener("click", hardDifficulty);
 
 function generateColorArray(arrLength) {
 	var arr = [];
-	for (var i = 0; i < arrLength; i++) {
+	if (difficulty === "hard"){
+		for (var i = 0; i < arrLength; i++) {
 		arr.push(generateColor());
+		}
+	} else if (difficulty === "easy") {
+		for (var i = 0; i < arrLength; i++) {
+		arr.push(generateColorEasy());
+		}
 	}
 	return arr;
 	console.log(arr);
@@ -37,6 +44,13 @@ function generateColor() {
 	var red = Math.floor(Math.random()*256);
 	var green = Math.floor(Math.random()*256);
 	var blue = Math.floor(Math.random()*256);
+	return "rgb(" + red + ", " + green + ", " + blue + ")";
+}
+
+function generateColorEasy() {
+	var red = 20*Math.floor(Math.floor(Math.random()*256)/20);
+	var green = 20*Math.floor(Math.floor(Math.random()*256)/20);
+	var blue = 20*Math.floor(Math.floor(Math.random()*256)/20);
 	return "rgb(" + red + ", " + green + ", " + blue + ")";
 }
 
@@ -75,9 +89,11 @@ function resetGame() {
 	titleDisplay.style.backgroundColor = "#2A8ACB";
 	resetBtn.textContent = "NEW COLORS"
 	messageDisplay.textContent = "";
+	
 }
 
 function easyDifficulty() {
+	difficulty = "easy";
 	easyBtn.classList.add("selected");
 	hardBtn.classList.remove("selected");
 	hideHardSquares();
@@ -86,6 +102,7 @@ function easyDifficulty() {
 }
 
 function hardDifficulty() {
+	difficulty = "hard";
 	easyBtn.classList.remove("selected");
 	hardBtn.classList.add("selected");
 	showHardSquares();
@@ -104,6 +121,3 @@ function showHardSquares() {
 		squares[i].classList.remove("hidden");
 	}
 }
-
-//idea: expand on easy mode. Make larger differences between rgb #'s 
-//and guarantee that all 3 are not close to each other'
