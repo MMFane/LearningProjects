@@ -7,14 +7,25 @@
 	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
 <body>
-	<div id="container">
-		<h1>To Do List <span id="toggle-form" class="rotate"><i class="fas fa-plus"></i></span> </h1>
-		<!-- <button>+</button> -->
+	<div class="container">
+		<h1>To Do 
+			<span class="delete-all"><i class="far fa-trash-alt"></i></span> 
+			<span id="toggle-form" class="open"><i class="fas fa-plus"></i></span>  
+		</h1>
 		<input type="text" placeholder="+ Add New Item">
-		<ul>
+		<ul id="main-list">
 			<li><span><i class="far fa-trash-alt"></i></span> Item 1</li>
 			<li><span><i class="far fa-trash-alt"></i></span> Item 2</li>
 			<li><span><i class="far fa-trash-alt"></i></span> Item 3</li>
+		</ul>
+	</div>
+	<div class="container">
+		<h1 class="deemphasize">Done
+			<span class="delete-all"><i class="far fa-trash-alt"></i></span> 
+		</h1>
+		<ul id="done-list">
+			<!-- starts empty -->
+		</ul>
 	</div>
 
 <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>

@@ -1,5 +1,6 @@
 html {
-	height: 100%;
+	min-height: 100%;
+	background-repeat: no-repeat;
 }
 
 body {
@@ -7,22 +8,32 @@ body {
 	background: #355C7D;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(#355C7D, #6C5B7B, #C06C84);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(#355C7D, #6C5B7B, #C06C84); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 h1 {
-	color: white;
-	background-color: #2980b9;
+	color: #ffe2af;
+	background-color: #f47a52;
 	margin: 0;
-	padding: 10px 20px;
 	text-transform: uppercase;
 	font-size: 24px;
 	font-weight: normal;
 }
 
+h1 {
+	background-color: #f47a52;
+	padding: 10px 20px;
+}
+
 h1 span {
+	color: #ffe2af;
 	float: right;
 	display: inline-block;
+	padding-left: 10px;
+}
+
+h1 span:hover {
+	color: white;
+	animation: pulse 1500ms;
 }
 
 ul {
@@ -34,9 +45,10 @@ ul {
 li {
 	color: #666;
 	background-color: white;
-	height: 40px;
+	min-height: 40px;
 	line-height: 40px;
-	/*padding-left: 20px;*/
+	word-wrap: break-word;
+	/*word-break: break-all;*/
 }
 
 /*style every other li*/
@@ -68,13 +80,13 @@ input::placeholder {
 
 input:focus {
 	background-color: white;
-	border: 3px solid #2980b9;
+	border: 3px solid #f47a52;
+	outline-width: 0;
 }
 
 li span {
 	background-color: #e74c3c;
 	height: 40px;
-	margin-right: 20px;
 	text-align: center;
 	color: white;
 	width: 0px;
@@ -82,28 +94,36 @@ li span {
 	transition: 0.2s ease-out;
 	width: 0px;
 	opacity: 0;
+	margin-right: 20px;
 }
 
 .done {
-	color: grey;
+	color: #BBB;
 	text-decoration: line-through;
 }
 
-.rotate {
-	transform: rotate(45deg);
+.open {
+	transform-origin: 20px center;
+	transform: scale(1.1);
 	transition: 0.2s ease-out;
 }
 
-.unrotate {
-	transform: rotate(0deg);
+.closed {
+	transform: scale(1.0);
 	transition: 0.2s ease-out;
 }
 
-#container {
+.container {
 	width: 360px;
-	margin: 15% auto;
+	margin: 0 auto;
 	background-color: #f7f7f7;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
+.container:first-of-type {
+	margin: 10% auto 5% auto;
+}
 
+.deemphasize {
+	background-color: #C06C84;
+}
